@@ -3,11 +3,7 @@ FROM python:3.9.16-slim
 
 RUN apt update && apt install --no-install-recommends -y git zip htop screen libgl1-mesa-glx
 
-# COPY requirements.txt .
 RUN python -m pip install --upgrade pip
-
-# RUN pip install --no-cache -r requirements.txt #albumentations wandb gsutil notebook Pillow>=9.1.0 
-#torch torchvision --extra-index-url https://download.pytorch.org/whl/cu113
 
 RUN mkdir -p /usr/src
 
