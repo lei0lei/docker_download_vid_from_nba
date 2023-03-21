@@ -10,14 +10,17 @@ RUN python -m pip install --upgrade pip
 #torch torchvision --extra-index-url https://download.pytorch.org/whl/cu113
 
 RUN mkdir -p /usr/src
-
+RUN ls
+RUN ls
 RUN git clone https://github.com/lei0lei/docker_download_vid_from_nba.git /usr/src
 
-WORKDIR /usr/src/docker_download_vid_from_nba
+WORKDIR /usr/src
 
 RUN pip install --no-cache -r requirements.txt 
 # COPY . /usr/src
 
 ENV OMP_NUM_THREADS=8
+
+CMD ["/bin/bash"]
 
 # CMD ["uvicorn", "app.apitest.testwatermark:app", "--host", "0.0.0.0", "--port", "8000"]
