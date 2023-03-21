@@ -23,8 +23,11 @@ docker build -t nba .
 docker run --rm -it --entrypoint /bin/bash nba
 ```
 
+另一个方式是[docker exec](https://stackoverflow.com/questions/30172605/how-do-i-get-into-a-docker-containers-shell)
+
 在宿主机及docker环境下共享目录，参考:
 [bind mount](https://docs.docker.com/get-started/06_bind_mounts/)
 
 如docker启动后自动运行python程序，在dockerfile中补充CMD命令。
 
+原则上不应为docker镜像提供任何远程连接方式，尤其是ssh命令，但是本仓库仍然提供了这一功能。
