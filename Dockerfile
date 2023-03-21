@@ -2,7 +2,7 @@ FROM python:3.9.16-slim
 
 RUN apt update && apt install --no-install-recommends -y systemd git zip htop screen libgl1-mesa-glx
 
-RUN apt install --no-install-recommends -y openssh-server &&  systemctl start ssh &&  systemctl enable ssh   
+RUN apt install --no-install-recommends -y openssh-server 
 
 RUN mkdir /var/run/sshd
 RUN chmod 0755 /var/run/sshd
@@ -25,5 +25,6 @@ RUN pip install --no-cache -r requirements.txt
 # ENV OMP_NUM_THREADS=8
 
 # CMD ["python", "example/download_video.py"]
+EXPOSE 22
 
 CMD ["/bin/bash"]
