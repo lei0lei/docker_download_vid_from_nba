@@ -14,7 +14,7 @@ RUN mkdir -p /usr/src
 RUN git clone https://github.com/lei0lei/docker_download_vid_from_nba.git /usr/src
 
 WORKDIR /usr/src/docker_download_vid_from_nba
-RUN ls
+
 RUN pip install --no-cache -r requirements.txt 
 # COPY . /usr/src
 
