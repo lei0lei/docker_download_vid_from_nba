@@ -9,9 +9,9 @@ docker pull lei0lei/nba:latest
 ```
 
 # docker编译流程
-
+```
 git clone https://github.com/lei0lei/docker_download_vid_from_nba.git
-
+```
 切换到项目目录下，运行
 ```sh
 docker build -t nba .

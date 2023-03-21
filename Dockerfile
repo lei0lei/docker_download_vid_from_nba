@@ -1,8 +1,5 @@
 FROM python:3.9.16-slim
 
-
-
-
 RUN apt update && apt install --no-install-recommends -y git zip htop screen libgl1-mesa-glx openssh-server
 
 
@@ -12,7 +9,6 @@ RUN /usr/sbin/sshd
 
 RUN useradd --create-home --shell /bin/bash --groups sudo boyan
 RUN echo boyan:111111 | chpasswd
-
 
 RUN python -m pip install --upgrade pip
 
@@ -29,5 +25,4 @@ RUN pip install --no-cache -r requirements.txt
 
 # CMD ["python", "example/download_video.py"]
 
-CMD ["/usr/sbin/sshd","-D"]
 CMD ["/bin/bash"]
