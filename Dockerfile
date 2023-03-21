@@ -9,6 +9,7 @@ RUN mkdir -p /usr/src
 RUN ls
 RUN ls
 RUN ls
+RUN ls
 RUN git clone https://github.com/lei0lei/docker_download_vid_from_nba.git /usr/src
 
 WORKDIR /usr/src

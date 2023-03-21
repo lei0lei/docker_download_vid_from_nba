@@ -6,3 +6,5 @@ glob2
 aiohttp
 asyncio
 requests
+sty
+uvloop
