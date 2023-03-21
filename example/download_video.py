@@ -137,6 +137,7 @@ async def fetch(session, url, dst, pbar=None, headers=None):
             return req
 
 if __name__ == "__main__":
+    print(f'yes,you start downloading')
     warnings.filterwarnings("ignore")
 
     argParser = argparse.ArgumentParser()
@@ -155,3 +156,4 @@ if __name__ == "__main__":
     # for csv in csvs:
         print("Current csv file: ", os.path.basename(csv))
         download_videos(csv, max_task = 8, write_path = video_folder)
+    print(f'yes, you end downloading')
