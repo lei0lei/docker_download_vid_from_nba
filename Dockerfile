@@ -16,6 +16,6 @@ RUN pip install --no-cache -r requirements.txt
 
 # ENV OMP_NUM_THREADS=8
 
-CMD ["/bin/bash"]
+CMD ["python", "example/download_video.py"]
 
 # CMD ["uvicorn", "app.apitest.testwatermark:app", "--host", "0.0.0.0", "--port", "8000"]
