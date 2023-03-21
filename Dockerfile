@@ -14,7 +14,7 @@ WORKDIR /usr/src
 RUN pip install --no-cache -r requirements.txt 
 # COPY . /usr/src
 
-ENV OMP_NUM_THREADS=8
+# ENV OMP_NUM_THREADS=8
 
 CMD ["/bin/bash"]
 
