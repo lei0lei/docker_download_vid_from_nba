@@ -30,4 +30,4 @@ docker run --rm -it --entrypoint /bin/bash nba
 
 如docker启动后自动运行python程序，在dockerfile中补充CMD命令。
 
-原则上不应为docker镜像提供任何远程连接方式，尤其是ssh命令，但是本仓库仍然提供了这一功能。
+原则上不应为docker镜像提供任何远程连接方式，尤其是ssh命令，本镜像安装了sshd服务并新增boyan:111111账户，但是未进行ssh连接测试。
