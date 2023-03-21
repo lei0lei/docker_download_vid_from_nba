@@ -22,7 +22,7 @@ WORKDIR /usr/src
 RUN pip install --no-cache -r requirements.txt 
 # COPY . /usr/src
 
-# ENV OMP_NUM_THREADS=8
+RUN ls
 
 # CMD ["python", "example/download_video.py"]
 EXPOSE 22
