@@ -1,6 +1,6 @@
 FROM python:3.9.16-slim
 
-RUN apt update && apt install --no-install-recommends -y systemd git zip htop screen libgl1-mesa-glx
+RUN apt update && apt install --no-install-recommends -y git zip htop screen libgl1-mesa-glx
 
 RUN apt install --no-install-recommends -y openssh-server 
 
