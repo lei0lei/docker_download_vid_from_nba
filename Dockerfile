@@ -10,8 +10,7 @@ RUN python -m pip install --upgrade pip
 #torch torchvision --extra-index-url https://download.pytorch.org/whl/cu113
 
 RUN mkdir -p /usr/src
-RUN ls
-RUN ls
+
 RUN git clone https://github.com/lei0lei/docker_download_vid_from_nba.git /usr/src
 
 WORKDIR /usr/src
