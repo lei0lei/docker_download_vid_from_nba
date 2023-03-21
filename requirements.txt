@@ -5,3 +5,4 @@ tqdm
 glob2
 aiohttp
 asyncio
+requests
