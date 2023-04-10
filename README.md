@@ -16,18 +16,11 @@ git clone https://github.com/lei0lei/docker_download_vid_from_nba.git
 ```sh
 docker build -t nba .
 ```
+如果需要添加python包，写入requirements后重新编译docker
+
 
 # 其他
 编译成功后，如要进入docker环境，在命令行输入以下命令，自动进入docker中的项目目录:
 ```sh
-docker run --rm -it --entrypoint /bin/bash nba
+docker run --user root -p 8888:8888 nba
 ```
-
-另一个方式是[docker exec](https://stackoverflow.com/questions/30172605/how-do-i-get-into-a-docker-containers-shell)
-
-在宿主机及docker环境下共享目录，参考:
-[bind mount](https://docs.docker.com/get-started/06_bind_mounts/)
-
-如docker启动后自动运行python程序，在dockerfile中补充CMD命令。
-
-原则上不应为docker镜像提供任何远程连接方式，尤其是ssh命令，本镜像安装了sshd服务并新增boyan:111111账户，但是未进行ssh连接测试。
