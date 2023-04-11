@@ -1,5 +1,5 @@
 FROM jupyter/base-notebook
-
+HEALTHCHECK NONE
 # RUN apt update && apt install --no-install-recommends -y git zip htop screen libgl1-mesa-glx
 # RUN apt install --no-install-recommends -y openssh-server 
 # RUN mkdir /var/run/sshd
