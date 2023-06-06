@@ -5,10 +5,13 @@ HEALTHCHECK NONE
 # RUN mkdir /var/run/sshd
 # RUN chmod 0755 /var/run/sshd
 # RUN /usr/sbin/sshd
-# RUN useradd --create-home --shell /bin/bash --groups sudo boyan
-# RUN echo boyan:111111 | chpasswd
+
+# RUN useradd -m boyan && echo "boyan:111111" | chpasswd && adduser boyan sudo
 
 RUN python -m pip install --upgrade pip
+
+USER root
+
 
 RUN mkdir -p /usr/src
 
